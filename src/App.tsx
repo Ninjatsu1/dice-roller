@@ -1,20 +1,18 @@
 import React from "react";
 import "./App.css";
+import { TextField, FormControlLabel } from "@material-ui/core";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./components/screens/home";
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <p>Dice roller</p>
-        <input placeholder="d40" />
-        <input placeholder="d60" />
-        <input placeholder="d80" />
-        <input placeholder="d10" />
-        <input placeholder="d12" />
-        <input placeholder="d20" />
-        <input placeholder="d100" />
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
