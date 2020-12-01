@@ -1,6 +1,7 @@
 import React from "react";
-import { TextField, Typography, Button, TableContainer, Table, TableHead, TableRow, TableCell, Checkbox } from "@material-ui/core";
-
+import { TextField, Typography, Button, TableContainer, Table, TableHead, TableRow, TableCell, Checkbox, Icon } from "@material-ui/core";
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
 /**
  * Props
  */
@@ -32,7 +33,8 @@ class Home extends React.Component<Props, State> {
 											Dice amount
 										</TableCell>
 										<TableCell>
-											Modifier add / minus
+											Modifier
+											<br /> <AddIcon /> / <RemoveIcon />
 										</TableCell>
 										<TableCell>
 											Modifier amount
@@ -200,7 +202,7 @@ class Home extends React.Component<Props, State> {
 									<TableCell>
 										<Button variant="contained">
 											Roll
-								</Button>
+										</Button>
 									</TableCell>
 									<TableCell>
 										Result
